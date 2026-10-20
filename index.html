@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Video Studio</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0b0b12;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    header {
+      padding: 24px;
+      text-align: left;
+      border-bottom: 1px solid #333;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    header span { color: #a78bfa; }
+    main {
+      max-width: 750px;
+      margin: 70px auto;
+      padding: 20px;
+    }
+    h1 { font-size: 48px; }
+    h1 span { color: #a78bfa; }
+    p { color: #b5b5c8; line-height: 1.6; }
+    textarea {
+      width: 100%;
+      height: 120px;
+      box-sizing: border-box;
+      margin-top: 25px;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #444;
+      background: #181824;
+      color: white;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 16px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 12px;
+      background: #8b5cf6;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+    }
+    #message { margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <header>✦ AI Video <span>Studio</span></header>
+  <main>
+    <h1>Imagine it.<br><span>Bring it to life.</span></h1>
+    <p>Turn your ideas into videos with AI.</p>
+    <textarea id="prompt" placeholder="Describe the video you want..."></textarea>
+    <button onclick="generate()">Create my video →</button>
+    <p id="message">Your creative journey starts here.</p>
+  </main>
+  <script>
+    function generate() {
+      const prompt = document.getElementById("prompt").value.trim();
+      document.getElementById("message").textContent = prompt
+        ? "Great idea! Real video generation will be connected next."
+        : "Please describe your video first.";
+    }
+  </script>
+</body>
+</html>
