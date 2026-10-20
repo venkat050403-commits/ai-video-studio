@@ -65,12 +65,16 @@
     <p id="message">Your creative journey starts here.</p>
   </main>
   <script>
-    function generate() {
-      const prompt = document.getElementById("prompt").value.trim();
-      document.getElementById("message").textContent = prompt
-        ? "Great idea! Real video generation will be connected next."
-        : "Please describe your video first.";
-    }
+    
+function generate() {
+  const prompt = document.getElementById("prompt").value.trim();
+  const message = document.getElementById("message");
+
+  if (!prompt) {
+    message.textContent = "Please describe your video first.";
+    return; }
+    message.textContent =
+    "Your video prompt is ready! Real AI video generation is not connected yet.";}
   </script>
 </body>
 </html>
